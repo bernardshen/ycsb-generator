@@ -13,7 +13,15 @@
 # permissions and limitations under the License. See accompanying
 # LICENSE file.
 
-recordcount=10000000
+# Yahoo! Cloud System Benchmark
+# Workload C: Read only
+#   Application example: user profile cache, where profiles are constructed elsewhere (e.g., Hadoop)
+#                        
+#   Read/update ratio: 100/0
+#   Default data size: 1 KB records (10 fields, 100 bytes each, plus key)
+#   Request distribution: zipfian
+
+recordcount=50000000
 operationcount=10000000
 fieldcount=1
 fieldlength=1
@@ -22,9 +30,9 @@ workload=com.yahoo.ycsb.workloads.CoreWorkload
 
 readallfields=true
 
-readproportion=0.95
+readproportion=1
 updateproportion=0
 scanproportion=0
-insertproportion=0.05
+insertproportion=0
 
-requestdistribution=latest
+requestdistribution=zipfian

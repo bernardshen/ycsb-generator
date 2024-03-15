@@ -1,3 +1,4 @@
+# Used to generate single workload with a .load and a .trans from a workload_spec.
 import sys
 import os
 
